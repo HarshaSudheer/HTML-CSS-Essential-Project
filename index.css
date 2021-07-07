@@ -1,0 +1,430 @@
+*{
+	/* by default no padding and margin */
+
+	padding: 0px;
+	margin: 0px;
+}
+/* CSS for header */
+.header{
+	height: 70px;
+
+	/* always give width in % and height in px because width is finite and height is infinite as it can keep on growing */
+
+	width: 100%;
+
+	/* go to inspect and click on the color, a color pallete appears, select the color you want copy its hex value and paste it */
+
+	/* background-color: gray; */
+
+	/*background-color: rgba(45, 140, 216, 1);*/
+
+	/* to allign its child horizontally (row is default, if column needed use flex-direction column) */
+
+	display: flex;
+
+	/* since flex-direction is row justify content main axis is horizontal axis */
+
+	justify-content: center;
+
+	/* position of header will be fixed while scrolling */
+	position: fixed;
+}
+.container{
+	/* dont give height as it can grow according to the child */
+	width: 90%;
+	/*background-color: red;*/
+	display: flex;
+}
+.logo{
+	/* same as header height */
+
+	height: 70px;
+
+	/* width will be based on its parent */
+
+	width: 20%;
+
+	/* use background color to know how that element will appear in the browser */
+
+	/*background-color: yellow;*/
+	font-size: 40px;
+	font-family: segoe UI;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	line-height: 70px;
+}
+.nav{
+	height: 70px;
+	width: 40%;
+	/*background-color: green;*/
+	display: flex;
+}
+
+/* as header_container selector is written after container selector, this will override container selector */
+
+.header_container{
+	/* space between so that logo on one side and nav on other side */
+	justify-content: space-between;
+}
+.nav-item{
+	height: 70px;
+	width: 20%;
+	/*background-color: gray;*/
+	font-family: segoe UI;
+	text-align: center;
+
+	/* line-height aligns text in center vertically give value as its height value*/
+
+	line-height: 70px;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+ /* remove all background colors red, yellow, green and gray*/
+
+ /* hover effect on nav-item */
+
+/* hover is a pseudo class */
+
+ .nav-item:hover{
+ 	background-color: white;
+ 	color: rgba(45, 140, 216, 1);
+ }
+.banner{
+	height: 600px;
+	width: 100%;
+	/* background-color: gray;*/
+
+	/* we can write on top of this image */
+
+	background-image: url(images/banner.jpg);
+
+	/* image will adjust */
+
+	background-size: cover;
+}
+.overlay{
+	height: 600px;
+	width: 100%;
+
+	/* red green blue alpha- transparency (0-1)*/
+
+	background-color: rgba(0,0,0,0.5);
+	display: flex;
+	align-items: center;
+}
+.banner_text{
+	height: 300px;
+	width: 40%;
+	background-color: rgba(45, 140, 216, 0.7);
+	font-family: segoe UI;
+	display: flex;
+	align-items: center;
+	color: white;
+}
+.padd{
+	padding: 50px;
+}
+.banner_title{
+	font-size: 45px;
+}
+.banner_description{
+	margin-bottom: 30px;
+}
+.banner_btn{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	background-color: transparent;
+	color: white;
+	font-weight: bold;
+	font-family: segoe UI;
+	border: 3px solid white;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.banner_btn:hover{
+	color: rgba(45, 140, 216, 1);
+	background-color: white;
+}
+
+/* CSS  for services */
+
+.services{
+	
+	/* no height as we want it to grow according to its children */
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #adacac;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: segoe UI;
+}
+.services_container{
+	margin-top: 50px;
+
+	/* read comment on 69th line in html */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.service{
+	height: 400px;
+	width: 47%;
+	background-color: white;
+	display: flex;
+	margin-top: 20px;
+}
+.service_img{
+	height: 400px;
+	width: 40%;
+	/*background-color: red;*/
+
+	/* flex so that the image will be automatically adjusted into the space */
+
+	display: flex;
+
+	/* image was overflowing, this hides it */
+
+	overflow: hidden;;
+}
+.service_details{
+	height: 400px;
+	width: 60%;
+	/*background-color: green;*/
+	display: flex;
+	align-items: center;
+}
+.service_padd{
+	padding: 20px;
+}
+.service_title{
+	margin-bottom: 15px;
+}
+.service_description{
+	margin-bottom: 30px;
+}
+.service_btn{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	background-color: rgba(45, 140, 216, 1);
+	color: white;
+	font-weight: bold;
+	font-family: segoe UI;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.about{
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	/* background-color: gray; */
+	font-family: segoe UI;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.about_container{
+	margin-top: 30px;
+	line-height: 25px;
+
+	/* since flex applied in the container, the span tag element appears side by side of rest of the content so add this display: inline */
+
+	display: inline;
+
+}
+.start_txt{
+	font-size: 40px;
+	font-weight: bold;
+	color: gray;
+}
+.highlight{
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: rgba(45, 140, 216, 1);
+	display: flex;
+	justify-content: center;
+}
+.highlight_container{
+	justify-content: space-between;
+}
+.high_ele{
+	height: 230px;
+	width: 23%;
+	background-color: rgba(0,0,0,0.4); 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: segoe UI;
+	color: white;
+	text-align: center;
+}
+.high_title{
+	font-size: 60px;
+}
+.high_description{
+	font-size: 25px;
+}
+.quote{
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	/*background-color: gray;*/
+	display: flex;
+	justify-content: center;
+	font-family: segoe UI;
+}
+.quote_container{
+	display: flex;
+	flex-direction:column ;
+	align-items: center;
+}
+.quote_title{
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+.quote_btn{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	background-color: rgba(45, 140, 216, 1);
+	color: white;
+	font-weight: bold;
+	font-family: segoe UI;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.quote_btn:hover{
+	color: rgba(45, 140, 216, 1);
+	background-color: white;
+	border: 2px solid rgba(45, 140, 216, 1);
+}
+.portfolio{
+	width: 100%;
+	/*background-color: gray;*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: segoe UI;
+}
+.portfolio_container{
+	flex-wrap: wrap;
+	width: 100%;
+}
+.project{
+	height: 300px;
+	width: 25%;
+	background-color: red;
+	background-size: cover;
+	display: flex;
+}
+.project1{
+	background-image: url(images/project1.jpg);
+}
+.project2{
+	background-image: url(images/project2.jpg);
+	align-items: flex-end;
+}
+.project3{
+	background-image: url(images/project3.jpg);
+}
+.project4{
+	background-image: url(images/project4.jpg);
+	align-items: flex-end;
+}
+.project5{
+	background-image: url(images/project5.jpg);
+}
+.project6{
+	background-image: url(images/project6.jpg);
+	align-items: flex-end;
+}
+.project7{
+	background-image: url(images/project7.jpg);
+}
+.project8{
+	background-image: url(images/project8.jpg);
+	align-items: flex-end;
+}
+.project_title{
+	color: white;
+	width: 100%;
+	height: 150px;
+	text-indent: 30px;
+	line-height: 150px;
+	background-color: rgba(45, 140, 216,0.6);
+	cursor: pointer;
+	transition: 0.4s;
+}
+.project_title:hover{
+	height: 300px;
+}
+.footer{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #6b6a6a;
+	display: flex;
+	justify-content: center;
+}
+.footer_child{
+	height: 230px;
+	width: 25%;
+	/*background-color: gray;*/
+	font-family: segoe UI;
+	display: flex;
+	justify-content: center;
+}
+.footer_child_1{
+	color: white;
+	font-size: 25px;
+	align-items: center;
+}
+li{
+	list-style-type: none;
+	margin-bottom: 15px;
+	color: white;
+}
+.first{
+	font-size: 22px;
+}
+.footer_child_4{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.social_container{
+	width: 65%;
+	justify-content: space-between;
+}
+.social_icon{
+	height: 45px;
+	width: 45px;
+	/*background-color: white;*/
+	background-size: cover;
+}
+.si1{
+	background-image: url(images/fb.png);
+}
+.si2{
+	background-image: url(images/google.png);
+}
+.si3{
+	background-image: url(images/linkedin.png);
+}
+.si4{
+	background-image: url(images/insta.png);
+}
